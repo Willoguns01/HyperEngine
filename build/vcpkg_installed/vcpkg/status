@@ -1,0 +1,184 @@
+Package: shader-slang
+Version: 2024.15.2
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 29d3ae72e023eaa1d3b50dcc37fb3aa911a7b8da60e6906192861f155764a327
+Description: Slang is a shading language that makes it easier to build and maintain large shader codebases in a modular and extensible fashion, while also maintaining the highest possible performance on modern GPUs and graphics APIs. Slang is based on years of collaboration between researchers at NVIDIA, Carnegie Mellon University, and Stanford.
+Status: install ok installed
+
+Package: vcpkg-cmake-config
+Version: 2024-05-23
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 57ca07ec3306f77ae634532e2871424665fdf7081ab59b02b2a3731a607b4653
+Status: install ok installed
+
+Package: vcpkg-cmake
+Version: 2024-04-23
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 7dcf1a3c270cb6d0f568be43a79e1938bfa502406c2de4a5fd9691b593d05137
+Status: install ok installed
+
+Package: glfw3
+Version: 3.4
+Port-Version: 1
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: f92960204ac80549ad0cab1128dbbe645d69adbdd0542b853aad5398f84225ac
+Description: GLFW is a free, Open Source, multi-platform library for OpenGL, OpenGL ES and Vulkan application development. It provides a simple, platform-independent API for creating windows, contexts and surfaces, reading input, handling events, etc.
+Status: install ok installed
+
+Package: imgui
+Version: 1.91.6
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 2b5a9c8089ed128b12e2a474e1157e704694cca37a185f37719d91b236cd900d
+Description: Bloat-free Immediate Mode Graphical User interface for C++ with minimal dependencies.
+Status: install ok installed
+
+Package: imgui
+Feature: glfw-binding
+Depends: glfw3
+Architecture: x64-windows
+Multi-Arch: same
+Description: Make available GLFW binding
+Status: install ok installed
+
+Package: vulkan-memory-allocator
+Version: 3.1.0
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: c1e78a771cd01fcf7db2ad23d1328b0b2a51d5e572fdeb753faf060f87681e13
+Description: Easy to integrate Vulkan memory allocation library from GPUOpen
+Status: install ok installed
+
+Package: vulkan-headers
+Version: 1.3.296.0
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 90b63bb9b38e4cebca24de505f58ecec152344de1c7e420626987714c8d3ef40
+Description: Vulkan header files and API registry
+Status: install ok installed
+
+Package: vulkan-loader
+Version: 1.3.296.0
+Depends: vcpkg-cmake, vcpkg-cmake-config, vulkan-headers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 4512c0c6616d8d963bd041159fee890d79b39e6f0892bb9eba48862d2e1d3cf3
+Description: Vulkan Development Tools
+Status: install ok installed
+
+Package: vulkan
+Version: 2023-12-17
+Depends: vcpkg-cmake, vulkan-headers, vulkan-loader
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 709a173fe5e2fd96055dc393aab45a8368389bd77972e9ef26db54f6081c657f
+Description: A stub package that ensures that Vulkan headers and a loader are available.
+    On Android, the NDK provides a loader at API level 24 or higher.
+Status: install ok installed
+
+Package: fmt
+Version: 11.0.2
+Port-Version: 1
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: e949cfe30b79152e4cc39b1d3973fbe94415b95af6d78a438564b075be38a5cc
+Description: {fmt} is an open-source formatting library providing a fast and safe alternative to C stdio and C++ iostreams.
+Status: install ok installed
+
+Package: daxa
+Version: 3.0.3
+Depends: fmt, vcpkg-cmake, vcpkg-cmake-config, vulkan, vulkan-headers, vulkan-memory-allocator
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 0de71f4a6985443375d7024b22cec850a96ac76cf5fbb753365f82bb6c5c8812
+Description: Daxa C++ Vulkan Abstraction
+Status: install ok installed
+
+Package: daxa
+Feature: utils-imgui
+Depends: imgui
+Architecture: x64-windows
+Multi-Arch: same
+Description: The ImGUI Daxa utility
+Status: install ok installed
+
+Package: daxa
+Feature: utils-mem
+Architecture: x64-windows
+Multi-Arch: same
+Description: The Mem Daxa utility
+Status: install ok installed
+
+Package: daxa
+Feature: utils-pipeline-manager-slang
+Depends: shader-slang
+Architecture: x64-windows
+Multi-Arch: same
+Description: Build with Slang
+Status: install ok installed
+
+Package: daxa
+Feature: utils-task-graph
+Architecture: x64-windows
+Multi-Arch: same
+Description: The Task-Graph Daxa utility
+Status: install ok installed
+
+Package: enkits
+Version: 1.11
+Port-Version: 3
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 204f26acf9a9793f2e489bf6b24fc1cc4be6b311cace3065cc401a4a3161fd72
+Description: A permissively licensed C and C++ Task Scheduler for creating parallel programs.
+Status: install ok installed
+
+Package: entt
+Version: 3.14.0
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 2bf40f458ab55104727000c25be484bbcfdb455a404ae75a82fb4c8be6bb04ea
+Description: Gaming meets modern C++ - a fast and reliable entity-component system and much more
+Status: install ok installed
+
+Package: glm
+Version: 1.0.1
+Port-Version: 3
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 3b8d662b764dc492c7231db1121015c762343d49c860e31e8241470928f2ac23
+Description: OpenGL Mathematics (GLM)
+Status: install ok installed
+
+Package: joltphysics
+Version: 5.2.0
+Port-Version: 1
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 4f73e12bee92818728a40e955dc52ebc0d15528131f979cb3bd81e14bb0c7546
+Description: A multi core friendly rigid body physics and collision detection library suitable for games and VR applications
+Status: install ok installed
+
+Package: spdlog
+Version: 1.15.0
+Port-Version: 1
+Depends: fmt, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 5776bfe9afe6dc93479cfe904bf2dae20462e3289e320f7fd1745e948c627076
+Description: Very fast, header-only/compiled, C++ logging library.
+Status: install ok installed
+

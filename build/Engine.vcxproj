@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{33B63C11-2E33-3C4C-905A-76B60E19B5FB}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <VcpkgEnabled>false</VcpkgEnabled>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>Engine</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="do_not_import_user.props" Condition="exists('do_not_import_user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Programming\HyperEngine\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Engine.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Engine</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Programming\HyperEngine\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Engine.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Engine</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Programming\HyperEngine\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Engine.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Engine</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Programming\HyperEngine\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Engine.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Engine</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\Programming\HyperEngine\Engine\public;E:\Programming\HyperEngine\Engine\private;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "E:/Programming/HyperEngine/build/vcpkg_installed/x64-windows/include" /external:I "E:/Programming/HyperEngine/build/vcpkg_installed/x64-windows/include/enkiTS" /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4251;4275</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Debug/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>E:/Programming/HyperEngine/build/Engine.dir/Debug/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;GLFW_DLL;DAXA_CMAKE_EXPORT=__declspec(dllimport);DAXA_BUILT_WITH_UTILS_IMGUI=true;DAXA_BUILT_WITH_UTILS_MEM=true;DAXA_BUILT_WITH_UTILS_PIPELINE_MANAGER_SLANG=true;DAXA_BUILT_WITH_UTILS_TASK_GRAPH=true;DAXA_SHADER_INCLUDE_DIR="E:/Programming/HyperEngine/build/vcpkg_installed/x64-windows/include";SPDLOG_SHARED_LIB;SPDLOG_COMPILED_LIB;SPDLOG_FMT_EXTERNAL;FMT_SHARED;_HAS_EXCEPTIONS=0;_DEBUG;JPH_FLOATING_POINT_EXCEPTIONS_ENABLED;JPH_OBJECT_STREAM;ENKITS_DLL=1;ENKITS_TASK_PRIORITIES_NUM=3;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;GLFW_DLL;DAXA_CMAKE_EXPORT=__declspec(dllimport);DAXA_BUILT_WITH_UTILS_IMGUI=true;DAXA_BUILT_WITH_UTILS_MEM=true;DAXA_BUILT_WITH_UTILS_PIPELINE_MANAGER_SLANG=true;DAXA_BUILT_WITH_UTILS_TASK_GRAPH=true;DAXA_SHADER_INCLUDE_DIR=\"E:/Programming/HyperEngine/build/vcpkg_installed/x64-windows/include\";SPDLOG_SHARED_LIB;SPDLOG_COMPILED_LIB;SPDLOG_FMT_EXTERNAL;FMT_SHARED;_HAS_EXCEPTIONS=0;JPH_FLOATING_POINT_EXCEPTIONS_ENABLED;JPH_OBJECT_STREAM;ENKITS_DLL=1;ENKITS_TASK_PRIORITIES_NUM=3;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\Programming\HyperEngine\Engine\public;E:\Programming\HyperEngine\Engine\private;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\include;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\include\enkiTS;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Programming\HyperEngine\Engine\public;E:\Programming\HyperEngine\Engine\private;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\include;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\include\enkiTS;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\Programming\HyperEngine\Engine\public;E:\Programming\HyperEngine\Engine\private;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "E:/Programming/HyperEngine/build/vcpkg_installed/x64-windows/include" /external:I "E:/Programming/HyperEngine/build/vcpkg_installed/x64-windows/include/enkiTS" /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4251;4275</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Release/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>E:/Programming/HyperEngine/build/Engine.dir/Release/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLFW_DLL;DAXA_CMAKE_EXPORT=__declspec(dllimport);DAXA_BUILT_WITH_UTILS_IMGUI=true;DAXA_BUILT_WITH_UTILS_MEM=true;DAXA_BUILT_WITH_UTILS_PIPELINE_MANAGER_SLANG=true;DAXA_BUILT_WITH_UTILS_TASK_GRAPH=true;DAXA_SHADER_INCLUDE_DIR="E:/Programming/HyperEngine/build/vcpkg_installed/x64-windows/include";SPDLOG_SHARED_LIB;SPDLOG_COMPILED_LIB;SPDLOG_FMT_EXTERNAL;FMT_SHARED;_HAS_EXCEPTIONS=0;JPH_FLOATING_POINT_EXCEPTIONS_ENABLED;JPH_OBJECT_STREAM;ENKITS_DLL=1;ENKITS_TASK_PRIORITIES_NUM=3;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLFW_DLL;DAXA_CMAKE_EXPORT=__declspec(dllimport);DAXA_BUILT_WITH_UTILS_IMGUI=true;DAXA_BUILT_WITH_UTILS_MEM=true;DAXA_BUILT_WITH_UTILS_PIPELINE_MANAGER_SLANG=true;DAXA_BUILT_WITH_UTILS_TASK_GRAPH=true;DAXA_SHADER_INCLUDE_DIR=\"E:/Programming/HyperEngine/build/vcpkg_installed/x64-windows/include\";SPDLOG_SHARED_LIB;SPDLOG_COMPILED_LIB;SPDLOG_FMT_EXTERNAL;FMT_SHARED;_HAS_EXCEPTIONS=0;JPH_FLOATING_POINT_EXCEPTIONS_ENABLED;JPH_OBJECT_STREAM;ENKITS_DLL=1;ENKITS_TASK_PRIORITIES_NUM=3;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\Programming\HyperEngine\Engine\public;E:\Programming\HyperEngine\Engine\private;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\include;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\include\enkiTS;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Programming\HyperEngine\Engine\public;E:\Programming\HyperEngine\Engine\private;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\include;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\include\enkiTS;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\Programming\HyperEngine\Engine\public;E:\Programming\HyperEngine\Engine\private;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "E:/Programming/HyperEngine/build/vcpkg_installed/x64-windows/include" /external:I "E:/Programming/HyperEngine/build/vcpkg_installed/x64-windows/include/enkiTS" /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4251;4275</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/MinSizeRel/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>E:/Programming/HyperEngine/build/Engine.dir/MinSizeRel/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLFW_DLL;DAXA_CMAKE_EXPORT=__declspec(dllimport);DAXA_BUILT_WITH_UTILS_IMGUI=true;DAXA_BUILT_WITH_UTILS_MEM=true;DAXA_BUILT_WITH_UTILS_PIPELINE_MANAGER_SLANG=true;DAXA_BUILT_WITH_UTILS_TASK_GRAPH=true;DAXA_SHADER_INCLUDE_DIR="E:/Programming/HyperEngine/build/vcpkg_installed/x64-windows/include";SPDLOG_SHARED_LIB;SPDLOG_COMPILED_LIB;SPDLOG_FMT_EXTERNAL;FMT_SHARED;_HAS_EXCEPTIONS=0;JPH_FLOATING_POINT_EXCEPTIONS_ENABLED;JPH_OBJECT_STREAM;ENKITS_DLL=1;ENKITS_TASK_PRIORITIES_NUM=3;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLFW_DLL;DAXA_CMAKE_EXPORT=__declspec(dllimport);DAXA_BUILT_WITH_UTILS_IMGUI=true;DAXA_BUILT_WITH_UTILS_MEM=true;DAXA_BUILT_WITH_UTILS_PIPELINE_MANAGER_SLANG=true;DAXA_BUILT_WITH_UTILS_TASK_GRAPH=true;DAXA_SHADER_INCLUDE_DIR=\"E:/Programming/HyperEngine/build/vcpkg_installed/x64-windows/include\";SPDLOG_SHARED_LIB;SPDLOG_COMPILED_LIB;SPDLOG_FMT_EXTERNAL;FMT_SHARED;_HAS_EXCEPTIONS=0;JPH_FLOATING_POINT_EXCEPTIONS_ENABLED;JPH_OBJECT_STREAM;ENKITS_DLL=1;ENKITS_TASK_PRIORITIES_NUM=3;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\Programming\HyperEngine\Engine\public;E:\Programming\HyperEngine\Engine\private;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\include;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\include\enkiTS;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Programming\HyperEngine\Engine\public;E:\Programming\HyperEngine\Engine\private;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\include;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\include\enkiTS;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\Programming\HyperEngine\Engine\public;E:\Programming\HyperEngine\Engine\private;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "E:/Programming/HyperEngine/build/vcpkg_installed/x64-windows/include" /external:I "E:/Programming/HyperEngine/build/vcpkg_installed/x64-windows/include/enkiTS" /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4251;4275</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/RelWithDebInfo/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>E:/Programming/HyperEngine/build/Engine.dir/RelWithDebInfo/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLFW_DLL;DAXA_CMAKE_EXPORT=__declspec(dllimport);DAXA_BUILT_WITH_UTILS_IMGUI=true;DAXA_BUILT_WITH_UTILS_MEM=true;DAXA_BUILT_WITH_UTILS_PIPELINE_MANAGER_SLANG=true;DAXA_BUILT_WITH_UTILS_TASK_GRAPH=true;DAXA_SHADER_INCLUDE_DIR="E:/Programming/HyperEngine/build/vcpkg_installed/x64-windows/include";SPDLOG_SHARED_LIB;SPDLOG_COMPILED_LIB;SPDLOG_FMT_EXTERNAL;FMT_SHARED;_HAS_EXCEPTIONS=0;JPH_FLOATING_POINT_EXCEPTIONS_ENABLED;JPH_OBJECT_STREAM;ENKITS_DLL=1;ENKITS_TASK_PRIORITIES_NUM=3;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLFW_DLL;DAXA_CMAKE_EXPORT=__declspec(dllimport);DAXA_BUILT_WITH_UTILS_IMGUI=true;DAXA_BUILT_WITH_UTILS_MEM=true;DAXA_BUILT_WITH_UTILS_PIPELINE_MANAGER_SLANG=true;DAXA_BUILT_WITH_UTILS_TASK_GRAPH=true;DAXA_SHADER_INCLUDE_DIR=\"E:/Programming/HyperEngine/build/vcpkg_installed/x64-windows/include\";SPDLOG_SHARED_LIB;SPDLOG_COMPILED_LIB;SPDLOG_FMT_EXTERNAL;FMT_SHARED;_HAS_EXCEPTIONS=0;JPH_FLOATING_POINT_EXCEPTIONS_ENABLED;JPH_OBJECT_STREAM;ENKITS_DLL=1;ENKITS_TASK_PRIORITIES_NUM=3;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\Programming\HyperEngine\Engine\public;E:\Programming\HyperEngine\Engine\private;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\include;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\include\enkiTS;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Programming\HyperEngine\Engine\public;E:\Programming\HyperEngine\Engine\private;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\include;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\include\enkiTS;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Programming\HyperEngine\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/Programming/HyperEngine/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Programming/HyperEngine -BE:/Programming/HyperEngine/build --check-stamp-file E:/Programming/HyperEngine/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindVulkan.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake;E:\Programming\HyperEngine\build\CMakeFiles\3.26.3\CMakeCCompiler.cmake;E:\Programming\HyperEngine\build\CMakeFiles\3.26.3\CMakeCXXCompiler.cmake;E:\Programming\HyperEngine\build\CMakeFiles\3.26.3\CMakeRCCompiler.cmake;E:\Programming\HyperEngine\build\CMakeFiles\3.26.3\CMakeSystem.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\Jolt\JoltConfig-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\Jolt\JoltConfig-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\Jolt\JoltConfig.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\VulkanMemoryAllocator\VulkanMemoryAllocatorConfig.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\daxa\daxa-config-version.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\daxa\daxa-config.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\daxa\daxa-targets-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\daxa\daxa-targets-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\daxa\daxa-targets.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\enkiTS\enkiTSConfig-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\enkiTS\enkiTSConfig-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\enkiTS\enkiTSConfig.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\entt\EnTTConfig.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\entt\EnTTConfigVersion.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\entt\EnTTTargets.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\fmt\fmt-config-version.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\fmt\fmt-config.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\fmt\fmt-targets-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\fmt\fmt-targets-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\fmt\fmt-targets.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glfw3\glfw3Config.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glfw3\glfw3Targets.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glm\glmConfig-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glm\glmConfig-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glm\glmConfig.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glm\glmConfigVersion.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\imgui\imgui-config.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\imgui\imgui-targets-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\imgui\imgui-targets-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\imgui\imgui-targets.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\spdlog\spdlogConfig.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\spdlog\spdlogConfigTargets-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\spdlog\spdlogConfigTargets-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\spdlog\spdlogConfigTargets.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\spdlog\spdlogConfigVersion.cmake;E:\Programming\HyperEngine\vcpkg-configuration.json;E:\Programming\HyperEngine\vcpkg.json;E:\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Programming\HyperEngine\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/Programming/HyperEngine/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Programming/HyperEngine -BE:/Programming/HyperEngine/build --check-stamp-file E:/Programming/HyperEngine/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindVulkan.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake;E:\Programming\HyperEngine\build\CMakeFiles\3.26.3\CMakeCCompiler.cmake;E:\Programming\HyperEngine\build\CMakeFiles\3.26.3\CMakeCXXCompiler.cmake;E:\Programming\HyperEngine\build\CMakeFiles\3.26.3\CMakeRCCompiler.cmake;E:\Programming\HyperEngine\build\CMakeFiles\3.26.3\CMakeSystem.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\Jolt\JoltConfig-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\Jolt\JoltConfig-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\Jolt\JoltConfig.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\VulkanMemoryAllocator\VulkanMemoryAllocatorConfig.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\daxa\daxa-config-version.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\daxa\daxa-config.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\daxa\daxa-targets-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\daxa\daxa-targets-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\daxa\daxa-targets.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\enkiTS\enkiTSConfig-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\enkiTS\enkiTSConfig-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\enkiTS\enkiTSConfig.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\entt\EnTTConfig.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\entt\EnTTConfigVersion.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\entt\EnTTTargets.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\fmt\fmt-config-version.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\fmt\fmt-config.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\fmt\fmt-targets-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\fmt\fmt-targets-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\fmt\fmt-targets.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glfw3\glfw3Config.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glfw3\glfw3Targets.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glm\glmConfig-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glm\glmConfig-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glm\glmConfig.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glm\glmConfigVersion.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\imgui\imgui-config.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\imgui\imgui-targets-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\imgui\imgui-targets-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\imgui\imgui-targets.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\spdlog\spdlogConfig.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\spdlog\spdlogConfigTargets-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\spdlog\spdlogConfigTargets-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\spdlog\spdlogConfigTargets.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\spdlog\spdlogConfigVersion.cmake;E:\Programming\HyperEngine\vcpkg-configuration.json;E:\Programming\HyperEngine\vcpkg.json;E:\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Programming\HyperEngine\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/Programming/HyperEngine/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Programming/HyperEngine -BE:/Programming/HyperEngine/build --check-stamp-file E:/Programming/HyperEngine/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindVulkan.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake;E:\Programming\HyperEngine\build\CMakeFiles\3.26.3\CMakeCCompiler.cmake;E:\Programming\HyperEngine\build\CMakeFiles\3.26.3\CMakeCXXCompiler.cmake;E:\Programming\HyperEngine\build\CMakeFiles\3.26.3\CMakeRCCompiler.cmake;E:\Programming\HyperEngine\build\CMakeFiles\3.26.3\CMakeSystem.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\Jolt\JoltConfig-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\Jolt\JoltConfig-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\Jolt\JoltConfig.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\VulkanMemoryAllocator\VulkanMemoryAllocatorConfig.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\daxa\daxa-config-version.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\daxa\daxa-config.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\daxa\daxa-targets-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\daxa\daxa-targets-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\daxa\daxa-targets.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\enkiTS\enkiTSConfig-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\enkiTS\enkiTSConfig-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\enkiTS\enkiTSConfig.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\entt\EnTTConfig.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\entt\EnTTConfigVersion.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\entt\EnTTTargets.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\fmt\fmt-config-version.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\fmt\fmt-config.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\fmt\fmt-targets-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\fmt\fmt-targets-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\fmt\fmt-targets.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glfw3\glfw3Config.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glfw3\glfw3Targets.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glm\glmConfig-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glm\glmConfig-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glm\glmConfig.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glm\glmConfigVersion.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\imgui\imgui-config.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\imgui\imgui-targets-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\imgui\imgui-targets-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\imgui\imgui-targets.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\spdlog\spdlogConfig.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\spdlog\spdlogConfigTargets-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\spdlog\spdlogConfigTargets-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\spdlog\spdlogConfigTargets.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\spdlog\spdlogConfigVersion.cmake;E:\Programming\HyperEngine\vcpkg-configuration.json;E:\Programming\HyperEngine\vcpkg.json;E:\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Programming\HyperEngine\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/Programming/HyperEngine/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Programming/HyperEngine -BE:/Programming/HyperEngine/build --check-stamp-file E:/Programming/HyperEngine/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindVulkan.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake;E:\Programming\HyperEngine\build\CMakeFiles\3.26.3\CMakeCCompiler.cmake;E:\Programming\HyperEngine\build\CMakeFiles\3.26.3\CMakeCXXCompiler.cmake;E:\Programming\HyperEngine\build\CMakeFiles\3.26.3\CMakeRCCompiler.cmake;E:\Programming\HyperEngine\build\CMakeFiles\3.26.3\CMakeSystem.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\Jolt\JoltConfig-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\Jolt\JoltConfig-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\Jolt\JoltConfig.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\VulkanMemoryAllocator\VulkanMemoryAllocatorConfig.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\daxa\daxa-config-version.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\daxa\daxa-config.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\daxa\daxa-targets-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\daxa\daxa-targets-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\daxa\daxa-targets.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\enkiTS\enkiTSConfig-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\enkiTS\enkiTSConfig-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\enkiTS\enkiTSConfig.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\entt\EnTTConfig.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\entt\EnTTConfigVersion.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\entt\EnTTTargets.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\fmt\fmt-config-version.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\fmt\fmt-config.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\fmt\fmt-targets-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\fmt\fmt-targets-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\fmt\fmt-targets.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glfw3\glfw3Config.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glfw3\glfw3Targets.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glm\glmConfig-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glm\glmConfig-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glm\glmConfig.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\glm\glmConfigVersion.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\imgui\imgui-config.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\imgui\imgui-targets-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\imgui\imgui-targets-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\imgui\imgui-targets.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\spdlog\spdlogConfig.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\spdlog\spdlogConfigTargets-debug.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\spdlog\spdlogConfigTargets-release.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\spdlog\spdlogConfigTargets.cmake;E:\Programming\HyperEngine\build\vcpkg_installed\x64-windows\share\spdlog\spdlogConfigVersion.cmake;E:\Programming\HyperEngine\vcpkg-configuration.json;E:\Programming\HyperEngine\vcpkg.json;E:\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Programming\HyperEngine\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="E:\Programming\HyperEngine\build\CMakeFiles\Engine.dir\cmake_pch.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Debug/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/Programming/HyperEngine/build/Engine.dir/Debug/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Release/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/Programming/HyperEngine/build/Engine.dir/Release/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/MinSizeRel/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/Programming/HyperEngine/build/Engine.dir/MinSizeRel/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/RelWithDebInfo/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/Programming/HyperEngine/build/Engine.dir/RelWithDebInfo/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="E:\Programming\HyperEngine\Engine\public\Engine.hpp" />
+    <ClCompile Include="E:\Programming\HyperEngine\Engine\public\Engine\Logger.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="E:\Programming\HyperEngine\Engine\public\Engine\Logger.hpp" />
+    <ClCompile Include="E:\Programming\HyperEngine\Engine\public\Engine\Rendering\Renderer.cpp">
+      <ObjectFileName>$(IntDir)/Engine/public/Engine/Rendering/Renderer.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="E:\Programming\HyperEngine\Engine\public\Engine\Rendering\Renderer.hpp" />
+    <ClCompile Include="E:\Programming\HyperEngine\Engine\public\Engine\WidgetSystem\WidgetBase.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="E:\Programming\HyperEngine\Engine\public\Engine\WidgetSystem\WidgetBase.hpp" />
+    <ClCompile Include="E:\Programming\HyperEngine\Engine\public\Engine\WidgetSystem\WidgetSystem.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="E:\Programming\HyperEngine\Engine\public\Engine\WidgetSystem\WidgetSystem.hpp" />
+    <ClCompile Include="E:\Programming\HyperEngine\Engine\public\Engine\WidgetSystem\Widgets\ConsoleWidget.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="E:\Programming\HyperEngine\Engine\public\Engine\WidgetSystem\Widgets\ConsoleWidget.hpp" />
+    <ClCompile Include="E:\Programming\HyperEngine\Engine\public\Engine\WidgetSystem\Widgets\MenuBar.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="E:\Programming\HyperEngine\Engine\public\Engine\WidgetSystem\Widgets\MenuBar.hpp" />
+    <ClCompile Include="E:\Programming\HyperEngine\Engine\public\Engine\Window.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="E:\Programming\HyperEngine\Engine\public\Engine\Window.hpp" />
+    <ClCompile Include="E:\Programming\HyperEngine\Engine\private\ImplLogger.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="E:\Programming\HyperEngine\Engine\private\ImplLogger.hpp" />
+    <ClCompile Include="E:\Programming\HyperEngine\Engine\private\ImplWindow.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="E:\Programming\HyperEngine\Engine\private\ImplWindow.hpp" />
+    <ClCompile Include="E:\Programming\HyperEngine\Engine\private\Rendering\ImplRenderer.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="E:\Programming\HyperEngine\Engine\private\Rendering\ImplRenderer.hpp" />
+    <ClCompile Include="E:\Programming\HyperEngine\Engine\private\Rendering\Renderer.cpp">
+      <ObjectFileName>$(IntDir)/Engine/private/Rendering/Renderer.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="E:\Programming\HyperEngine\Engine\private\WidgetSystem\ImplWidgetSystem.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/Programming/HyperEngine/build/CMakeFiles/Engine.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="E:\Programming\HyperEngine\Engine\private\WidgetSystem\ImplWidgetSystem.hpp" />
+    <ClInclude Include="E:\Programming\HyperEngine\build\CMakeFiles\Engine.dir\Debug\cmake_pch.hxx" />
+    <ClInclude Include="E:\Programming\HyperEngine\build\CMakeFiles\Engine.dir\Release\cmake_pch.hxx" />
+    <ClInclude Include="E:\Programming\HyperEngine\build\CMakeFiles\Engine.dir\MinSizeRel\cmake_pch.hxx" />
+    <ClInclude Include="E:\Programming\HyperEngine\build\CMakeFiles\Engine.dir\RelWithDebInfo\cmake_pch.hxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:\Programming\HyperEngine\build\ZERO_CHECK.vcxproj">
+      <Project>{FCCA3BE1-57B0-322C-BC29-3C733598BC26}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

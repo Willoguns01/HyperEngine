@@ -1,0 +1,25 @@
+{
+  "dependencies": [
+    {
+      "name": "daxa",
+      "features": [
+        "utils-imgui",
+        "utils-mem",
+        "utils-pipeline-manager-slang",
+        "utils-task-graph"
+      ]
+    },
+    {
+      "name": "imgui",
+      "features": [
+        "glfw-binding"
+      ]
+    },
+    "glfw3",
+    "entt",
+    "glm",
+    "joltphysics",
+    "spdlog",
+    "enkits"
+  ]
+}
