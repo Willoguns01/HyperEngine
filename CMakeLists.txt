@@ -9,17 +9,14 @@ project(Engine)
 project(Editor)
 project(Runtime)
 
-# rendering / windowing
 find_package(daxa CONFIG REQUIRED)
 find_package(glfw3 CONFIG REQUIRED)
-# engine
 find_package(spdlog CONFIG REQUIRED)
 find_package(Jolt CONFIG REQUIRED)
 find_package(EnTT CONFIG REQUIRED)
 find_package(glm CONFIG REQUIRED)
 find_package(enkiTS CONFIG REQUIRED)
 find_package(imgui CONFIG REQUIRED)
-# editor
 
 # sources and includes
 # engine
