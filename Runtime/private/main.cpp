@@ -48,19 +48,10 @@ public:
             .applicationName = "HyperEngine",
             .renderWidth = 1280,
             .renderHeight = 720,
+            .windowHandle = window.GetNativeHandle(),
+            .windowPlatform = window.GetNativePlatform(),
+            .presentMode = daxa::PresentMode::FIFO_RELAXED,
             .imguiContext = ImGui::GetCurrentContext()
-        });
-        
-        swapchain = renderer->GetDevice().create_swapchain({
-            .native_window = window.GetNativeHandle(),
-            .native_window_platform = window.GetNativePlatform(),
-            .surface_format_selector = daxa::default_format_score,
-            .present_mode = daxa::PresentMode::IMMEDIATE,
-            .present_operation = daxa::PresentOp::IDENTITY,
-            .image_usage = daxa::ImageUsageFlagBits::TRANSFER_DST,
-            .max_allowed_frames_in_flight = 2,
-            .queue_family = daxa::QueueFamily::MAIN,
-            .name = "Swapchain"
         });
 
         widgetSystem = WidgetSystem(WidgetSystemInfo{
@@ -90,31 +81,10 @@ public:
             widgetSystem.Update();
 
             if (window.GetSwapchainState()) {
-                swapchain.resize();
-                
-                renderer->ResizeRenderingResources(window.GetWidth(), window.GetHeight());
+                renderer->Resize(window.GetWidth(), window.GetHeight());
             }
-        
-            daxa::ImageId swapchainImage = swapchain.acquire_next_image();
-            if (swapchainImage.is_empty()) {
-                continue;
-            }
-        
-            std::vector<daxa::BinarySemaphore> renderWaitSemaphores = renderer->RenderScene({
-                .renderTarget = swapchainImage,
-                .dstLayout = daxa::ImageLayout::PRESENT_SRC,
-                .waitSemaphores = {swapchain.current_acquire_semaphore()},
-                .signalSemaphores = {swapchain.current_present_semaphore()},
-                .signalTimelines = {swapchain.current_timeline_pair()}
-            });
-        
-            renderer->GetDevice().present_frame({
-                .wait_binary_semaphores = renderWaitSemaphores,
-                .swapchain = swapchain,
-                .queue = daxa::QUEUE_MAIN
-            });
-        
-            renderer->GetDevice().collect_garbage();
+
+            renderer->RenderScene({});
         }
     }
 
@@ -124,7 +94,6 @@ private:
     Window window;
 
     Renderer* renderer = nullptr;
-    daxa::Swapchain swapchain;
 
     WidgetSystem widgetSystem;
 };
