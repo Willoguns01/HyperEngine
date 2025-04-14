@@ -5,8 +5,6 @@
 #include <spdlog/pattern_formatter.h>
 #include <spdlog/sinks/stdout_color_sinks.h>
 #include <spdlog/sinks/rotating_file_sink.h>
-#include <spdlog/sinks/ringbuffer_sink.h>
-#include <spdlog/sinks/callback_sink.h>
 
 #include <mutex>
 #include <list>

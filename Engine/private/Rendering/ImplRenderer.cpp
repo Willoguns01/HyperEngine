@@ -71,6 +71,9 @@ namespace HyperEngine
     void ImplRenderer::RenderScene(const RenderSceneInfo& renderInfo)
     {
         daxa::ImageId swapchainImage = _swapchain.acquire_next_image();
+        if (swapchainImage.is_empty()) {
+            return;
+        }
 
         _swapchainTaskImage.set_images({.images = std::span{&swapchainImage, 1}});
 
@@ -81,7 +84,7 @@ namespace HyperEngine
 
     void ImplRenderer::SetupResources(uint32_t width, uint32_t height)
     {
-        _swapchainTaskImage = daxa::TaskImage{{.swapchain_image = true, .name = "swapchain image"}};
+
     }
 
     void ImplRenderer::CleanupResources()
@@ -97,6 +100,7 @@ namespace HyperEngine
             .name = "taskgraph"
         });
 
+        _swapchainTaskImage = daxa::TaskImage{{.swapchain_image = true, .name = "swapchain image"}};
         _taskGraph.use_persistent_image(_swapchainTaskImage);
 
         _taskGraph.add_task({

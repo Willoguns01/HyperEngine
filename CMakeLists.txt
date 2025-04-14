@@ -46,40 +46,18 @@ target_link_libraries(Engine PUBLIC
     # editor
     imgui::imgui 
 )
-target_precompile_headers(Engine PRIVATE
-    <unordered_map>
-    <iostream>
-    <fstream>
-    <sstream>
-    <string>
-    <vector>
-    <memory>
-    <list>
-    <mutex>
-    <chrono>
-    <functional>
-
-    <daxa/daxa.hpp>
-    <daxa/utils/task_graph.hpp>
-
-    <spdlog/spdlog.h>
-    <spdlog/sinks/stdout_color_sinks.h>
-    <spdlog/sinks/rotating_file_sink.h>
-    <spdlog/sinks/ringbuffer_sink.h>
-
-    <GLFW/glfw3.h>
-    # this needs defines depending on platform, TODO
-    #<GLFW/glfw3native.h>
-)
+target_precompile_headers(Engine PUBLIC Engine/public/Engine/pch.hpp)
 
 # editor
 add_executable(Editor ${EDITOR_PUBLIC} ${EDITOR_PRIVATE})
 target_include_directories(Editor PUBLIC Editor/public/)
 target_include_directories(Editor PRIVATE Editor/private/ Editor/public/)
 target_link_libraries(Editor PRIVATE Engine)
+target_precompile_headers(Editor REUSE_FROM Engine)
 
 # runtime
 add_executable(Runtime ${RUNTIME_PUBLIC} ${RUNTIME_PRIVATE})
 target_include_directories(Runtime PUBLIC Runtime/public/)
 target_include_directories(Runtime PRIVATE Runtime/private/ Runtime/public/)
 target_link_libraries(Runtime PRIVATE Engine)
+target_precompile_headers(Runtime REUSE_FROM Engine)

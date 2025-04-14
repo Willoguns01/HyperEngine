@@ -44,13 +44,13 @@ public:
 
         ImGui_ImplGlfw_InitForVulkan(window.GetGLFWWindow(), true);
         
-        renderer = new Renderer(RendererConfig{
+        renderer = Renderer(RendererConfig{
             .applicationName = "HyperEngine",
             .renderWidth = 1280,
             .renderHeight = 720,
             .windowHandle = window.GetNativeHandle(),
             .windowPlatform = window.GetNativePlatform(),
-            .presentMode = daxa::PresentMode::FIFO_RELAXED,
+            .presentMode = daxa::PresentMode::IMMEDIATE,
             .imguiContext = ImGui::GetCurrentContext()
         });
 
@@ -64,8 +64,6 @@ public:
 
     ~Application()
     {
-        delete renderer;
-
         ImGui_ImplGlfw_Shutdown();
         ImGui::DestroyContext();
     }
@@ -81,20 +79,17 @@ public:
             widgetSystem.Update();
 
             if (window.GetSwapchainState()) {
-                renderer->Resize(window.GetWidth(), window.GetHeight());
+                renderer.Resize(window.GetWidth(), window.GetHeight());
             }
 
-            renderer->RenderScene({});
+            renderer.RenderScene({});
         }
     }
 
 private:
     Logger logger;
-
     Window window;
-
-    Renderer* renderer = nullptr;
-
+    Renderer renderer;
     WidgetSystem widgetSystem;
 };
 
