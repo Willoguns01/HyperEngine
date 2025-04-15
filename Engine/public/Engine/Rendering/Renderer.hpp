@@ -16,11 +16,6 @@
 
 namespace HyperEngine
 {
-    struct GraphicsSettings
-    {
-
-    };
-
     struct RendererConfig
     {
         std::string_view applicationName = "HyperEngine";
@@ -32,9 +27,9 @@ namespace HyperEngine
         ImGuiContext* imguiContext = nullptr;
     };
 
-    struct Resources
+    struct GraphicsSettings
     {
-        // gbuffer, mesh buffers, etc
+        daxa::PresentMode presentMode = daxa::PresentMode::FIFO_RELAXED;
     };
 
     struct RenderSceneInfo
@@ -53,6 +48,9 @@ namespace HyperEngine
         void Resize(uint32_t width, uint32_t height);
 
         void RenderScene(const RenderSceneInfo& renderInfo);
+
+        GraphicsSettings GetSettings() const;
+        void ApplySettings(const GraphicsSettings& settings);
 
         daxa::Instance GetInstance();
         daxa::Device GetDevice();

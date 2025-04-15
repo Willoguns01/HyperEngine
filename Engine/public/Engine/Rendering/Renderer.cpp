@@ -25,6 +25,15 @@ namespace HyperEngine
         _impl->RenderScene(renderInfo);
     }
 
+    GraphicsSettings Renderer::GetSettings() const {
+        return _impl->_graphicsSettings;
+    }
+
+    void Renderer::ApplySettings(const GraphicsSettings& settings)
+    {
+        _impl->SetPresentMode(settings.presentMode);
+    }
+
     daxa::Instance Renderer::GetInstance() {
         return _impl->_instance;
     }

@@ -30,6 +30,25 @@ namespace HyperEngine::Widgets
                 ImGui::EndMenu();
             }
 
+            static bool vsyncEnable = true;
+
+            if (ImGui::BeginMenu("Settings"))
+            {
+                if (ImGui::MenuItem("Vsync")) {
+                    vsyncEnable = !vsyncEnable;
+                    daxa::PresentMode presentMode;
+                    if (vsyncEnable) {
+                        presentMode = daxa::PresentMode::FIFO_RELAXED;
+                    } else {
+                        presentMode = daxa::PresentMode::IMMEDIATE;
+                    }
+
+                    GraphicsSettings settings = renderer->GetSettings();
+                    settings.presentMode = presentMode;
+                    renderer->ApplySettings(settings);
+                }
+            }
+
             ImGui::EndMainMenuBar();
         }
     }

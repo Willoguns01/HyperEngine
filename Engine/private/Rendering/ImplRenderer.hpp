@@ -8,6 +8,11 @@
 
 namespace HyperEngine
 {
+    struct Resources
+    {
+
+    };
+
     struct ImplRenderer
     {
         ImplRenderer() = default;
@@ -18,10 +23,11 @@ namespace HyperEngine
 
         void RenderScene(const RenderSceneInfo& renderInfo);
 
+        RendererConfig _initialConfig = {};
+        GraphicsSettings _graphicsSettings = {};
+
         uint32_t _renderingWidth = 0;
         uint32_t _renderingHeight = 0;
-
-        bool _resourcesInitialised = false;
         
         Logger _logger;
         
@@ -42,5 +48,8 @@ namespace HyperEngine
         void CleanupResources();
 
         void SetupTaskGraph();
+
+        // effectively just recreates the swapchain with different present mode ☜(ﾟヮﾟ☜)
+        void SetPresentMode(daxa::PresentMode presentMode);
     };
 }

@@ -2,6 +2,8 @@
 
 #include "Engine/WidgetSystem/WidgetBase.hpp"
 
+#include "Engine/Rendering/Renderer.hpp"
+
 namespace HyperEngine::Widgets
 {
     class MenuBar : public WidgetBase
@@ -12,5 +14,7 @@ namespace HyperEngine::Widgets
         ~MenuBar();
 
         void Update() override;
+
+        Renderer* renderer = nullptr;
     };
 }
