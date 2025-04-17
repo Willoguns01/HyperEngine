@@ -25,6 +25,7 @@ Building HyperEngine requires that you have following installed on your system:
 - CMake
 - vcpkg
 - Vulkan SDK
+
 The rest of the libraries are downloaded at build-time.
 
 To build the engine, editor and runtime in release configuration, simply run the ```build.bat``` script.
