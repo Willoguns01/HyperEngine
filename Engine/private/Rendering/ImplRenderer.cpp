@@ -15,7 +15,7 @@ namespace HyperEngine
         _renderingWidth = config.renderWidth;
         _renderingHeight = config.renderHeight;
 
-        _graphicsSettings.presentMode = config.presentMode;
+        _currentPresentMode = config.presentMode;
 
         _instance = daxa::create_instance({
             .flags = daxa::InstanceFlagBits::DEBUG_UTILS | daxa::InstanceFlagBits::PARENT_MUST_OUTLIVE_CHILD,
@@ -143,21 +143,7 @@ namespace HyperEngine
 
     void ImplRenderer::SetPresentMode(daxa::PresentMode presentMode)
     {
-        _device.wait_idle();
-
-        _swapchain = _device.create_swapchain({
-            .native_window = _initialConfig.windowHandle,
-            .native_window_platform = _initialConfig.windowPlatform,
-            .surface_format_selector = daxa::default_format_score,
-            .present_mode = presentMode,
-            .present_operation = daxa::PresentOp::IDENTITY,
-            .image_usage = daxa::ImageUsageFlagBits::COLOR_ATTACHMENT,
-            .max_allowed_frames_in_flight = 2,
-            .queue_family = daxa::QueueFamily::MAIN,
-            .name = "Swapchain"
-        });
-
-        // task graph must be rebuilt, swapchain ptr has changed
-        SetupTaskGraph();
+        _swapchain.set_present_mode(presentMode);
+        _currentPresentMode = presentMode;
     }
 }

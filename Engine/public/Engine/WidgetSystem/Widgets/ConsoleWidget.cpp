@@ -10,14 +10,15 @@ namespace HyperEngine::Widgets
     constexpr ImVec4 infoColour = ImVec4{partialNum, 1.0f, partialNum, 1.0f};
     constexpr ImVec4 warnColour = ImVec4{1.0f, 1.0f, partialNum, 1.0f};
     constexpr ImVec4 errorColour = ImVec4{1.0f, partialNum, partialNum, 1.0f};
-
-    ConsoleWidget::ConsoleWidget(WidgetSystem* widgetSystem, const std::string& name)
-        : WidgetBase(widgetSystem, name)
+    
+    ConsoleWidget::ConsoleWidget(Logger logger)
     {
         RegisterCommand("help", HelpCommandCallback, this);
         RegisterCommand("clear", ClearCommandCallback, this);
-
-        _engineLogger = widgetSystem->GetLogger();
+    
+        memset(_inputBuffer, 0, sizeof(_inputBuffer));
+    
+        _engineLogger = logger;
         _engineLogger.Info("Initialised logger widget");
     }
 
@@ -32,10 +33,10 @@ namespace HyperEngine::Widgets
         for (auto& entry : entries) {
             _logs.push_back(entry);
         }
-        
-        if (_open)
+    
+        if (_isOpen)
         {
-            ImGui::Begin("Logging", &_open);
+            ImGui::Begin("Console", &_isOpen);
 
             const float footer_height_to_reserve = ImGui::GetStyle().ItemSpacing.y + ImGui::GetFrameHeightWithSpacing();
             ImGui::BeginChild("LoggerChild", ImVec2(0, -footer_height_to_reserve), ImGuiChildFlags_Border, ImGuiWindowFlags_HorizontalScrollbar);
@@ -65,6 +66,7 @@ namespace HyperEngine::Widgets
             ImGui::EndChild();
 
             // Command-line
+#ifdef NDEBUG
             bool reclaim_focus = false;
             ImGuiInputTextFlags input_text_flags = ImGuiInputTextFlags_EnterReturnsTrue | ImGuiInputTextFlags_EscapeClearsAll | ImGuiInputTextFlags_CallbackCompletion | ImGuiInputTextFlags_CallbackHistory;
             if (ImGui::InputText("Input", _inputBuffer, IM_ARRAYSIZE(_inputBuffer), input_text_flags, nullptr, (void*)this))
@@ -80,6 +82,11 @@ namespace HyperEngine::Widgets
             ImGui::SetItemDefaultFocus();
             if (reclaim_focus)
                 ImGui::SetKeyboardFocusHere(-1); // Auto focus previous widget
+#else
+            // TODO: what actually causes this?
+            // memory access error when clicking on the input box
+            ImGui::TextColored(errorColour, "Application was built in debug configuration, a current bug will cause a crash if using console commands");
+#endif
 
             ImGui::End();
         }

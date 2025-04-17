@@ -1,7 +1,5 @@
 #include "ImplWidgetSystem.hpp"
 
-#include "Engine/WidgetSystem/WidgetBase.hpp"
-
 namespace HyperEngine
 {  
     ImplWidgetSystem::ImplWidgetSystem(const WidgetSystemInfo& systemInfo)

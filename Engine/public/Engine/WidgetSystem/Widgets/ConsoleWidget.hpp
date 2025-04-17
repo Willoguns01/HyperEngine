@@ -12,13 +12,13 @@ namespace HyperEngine::Widgets
         typedef std::function<void(void*,const std::string&)> CommandCallbackFunc;
 
         ConsoleWidget() = default;
-        ConsoleWidget(WidgetSystem* widgetSystem, const std::string& name);
+        ConsoleWidget(Logger logger);
         ~ConsoleWidget();
 
         void Update() override;
 
         void RegisterCommand(const std::string& command, CommandCallbackFunc callback, void* customData);
-        
+
     private:
         Logger _engineLogger;
 

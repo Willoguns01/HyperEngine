@@ -58,10 +58,8 @@ public:
             .logger = logger
         });
 
-        // TODO: need to rethink widgets, maybe turn into pimpl classes
-        
-        widgetSystem.AddWidget<Widgets::MenuBar>("MenuBar");
-        widgetSystem.AddWidget<Widgets::ConsoleWidget>("Console");
+        widgetSystem.AddWidget<Widgets::MenuBar>("MenuBar", &widgetSystem, renderer);
+        widgetSystem.AddWidget<Widgets::ConsoleWidget>("Console", logger);
     }
 
     ~Application()

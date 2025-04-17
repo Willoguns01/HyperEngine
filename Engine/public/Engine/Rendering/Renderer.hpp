@@ -29,7 +29,7 @@ namespace HyperEngine
 
     struct GraphicsSettings
     {
-        daxa::PresentMode presentMode = daxa::PresentMode::FIFO_RELAXED;
+
     };
 
     struct RenderSceneInfo
@@ -51,6 +51,9 @@ namespace HyperEngine
 
         GraphicsSettings GetSettings() const;
         void ApplySettings(const GraphicsSettings& settings);
+
+        void SetPresentMode(daxa::PresentMode presentMode);
+        daxa::PresentMode GetPresentMode() const;
 
         daxa::Instance GetInstance();
         daxa::Device GetDevice();

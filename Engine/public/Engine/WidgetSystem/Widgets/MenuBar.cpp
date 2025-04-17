@@ -1,52 +1,44 @@
 #include "Engine/WidgetSystem/Widgets/MenuBar.hpp"
 
+#include "Engine/WidgetSystem/Widgets/ConsoleWidget.hpp"
+
 #include <imgui.h>
 
 namespace HyperEngine::Widgets
 {
-    MenuBar::MenuBar(WidgetSystem* widgetSystem, const std::string& name)
-        : WidgetBase(widgetSystem, name)
+    MenuBar::MenuBar(WidgetSystem* widgetSystem, Renderer renderer)
     {
-        WidgetBase::GetWidgetSystem()->GetLogger().Info("Initialised menu bar 'widget'");
-    }
-
-    MenuBar::~MenuBar()
-    {
-        WidgetBase::GetWidgetSystem()->GetLogger().Info("Cleaned-up menu bar 'widget'");
+        _widgetSystem = widgetSystem;
+        _logger = _widgetSystem->GetLogger();
+        _renderer = renderer;
     }
 
     void MenuBar::Update()
     {
-        WidgetSystem* widgetSystem = WidgetBase::GetWidgetSystem();
-
         if (ImGui::BeginMainMenuBar())
         {
             if (ImGui::BeginMenu("Windows"))
             {
                 if (ImGui::MenuItem("Console")) {
-                    widgetSystem->GetWidget("Console")->SetOpen("True");
+                    _widgetSystem->GetWidget<Widgets::ConsoleWidget>("Console")->_isOpen = true;
                 }
 
                 ImGui::EndMenu();
             }
 
-            static bool vsyncEnable = true;
-
             if (ImGui::BeginMenu("Settings"))
             {
                 if (ImGui::MenuItem("Vsync")) {
-                    vsyncEnable = !vsyncEnable;
-                    daxa::PresentMode presentMode;
-                    if (vsyncEnable) {
+                    daxa::PresentMode presentMode = _renderer.GetPresentMode();
+                    if (presentMode == daxa::PresentMode::IMMEDIATE) {
                         presentMode = daxa::PresentMode::FIFO_RELAXED;
                     } else {
                         presentMode = daxa::PresentMode::IMMEDIATE;
                     }
-
-                    GraphicsSettings settings = renderer->GetSettings();
-                    settings.presentMode = presentMode;
-                    renderer->ApplySettings(settings);
+                    _renderer.SetPresentMode(presentMode);
                 }
+
+                ImGui::EndMenu();
             }
 
             ImGui::EndMainMenuBar();

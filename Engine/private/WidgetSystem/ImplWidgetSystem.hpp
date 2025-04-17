@@ -1,9 +1,10 @@
 #pragma once
 
-#include "Engine/WidgetSystem/WidgetSystem.hpp"
-
 #include <unordered_map>
 #include <string>
+#include <memory>
+
+#include "Engine/WidgetSystem/WidgetBase.hpp"
 
 namespace HyperEngine
 {

@@ -5,6 +5,8 @@
 #include <string>
 #include <memory>
 
+#include "Engine/WidgetSystem/WidgetBase.hpp"
+
 namespace HyperEngine
 {
     namespace Widgets {
@@ -21,14 +23,12 @@ namespace HyperEngine
     public:
         WidgetSystem() = default;
         WidgetSystem(const WidgetSystemInfo& systemInfo);
-        WidgetSystem(const WidgetSystem& other);
         ~WidgetSystem() = default;
 
-        template <typename T>
-        void AddWidget(const std::string& name)
+        template <typename T, typename... Args>
+        void AddWidget(const std::string& name, Args... args)
         {
-            // TODO: do we need to check the type inherits from WidgetBase?
-            AddWidget(name, std::make_shared<T>(this, name));
+            AddWidget(name, std::make_shared<T>(args...));
         }
 
         void AddWidget(const std::string& name, std::shared_ptr<Widgets::WidgetBase> widget);
@@ -36,7 +36,7 @@ namespace HyperEngine
         template <typename T>
         std::shared_ptr<T> GetWidget(const std::string& name) const
         {
-            return static_cast<std::shared_ptr<T>>(GetWidget(name));
+            return std::dynamic_pointer_cast<T>(GetWidget(name));
         }
 
         std::shared_ptr<Widgets::WidgetBase> GetWidget(const std::string& name) const;

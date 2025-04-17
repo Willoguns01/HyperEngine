@@ -9,11 +9,6 @@ namespace HyperEngine
         impl = std::make_shared<ImplWidgetSystem>(systemInfo);
     }
 
-    WidgetSystem::WidgetSystem(const WidgetSystem& other)
-    {
-        impl = other.impl;
-    }
-
     void WidgetSystem::AddWidget(const std::string& name, std::shared_ptr<Widgets::WidgetBase> widget)
     {
         impl->_widgets.insert(std::pair(name, widget));

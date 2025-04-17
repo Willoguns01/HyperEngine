@@ -6,15 +6,19 @@
 
 namespace HyperEngine::Widgets
 {
+    struct ImplMenuBar;
     class MenuBar : public WidgetBase
     {
     public:
         MenuBar() = default;
-        MenuBar(WidgetSystem* widgetSystem, const std::string& name);
-        ~MenuBar();
+        MenuBar(WidgetSystem* widgetSystem, Renderer renderer);
+        ~MenuBar() = default;
 
         void Update() override;
 
-        Renderer* renderer = nullptr;
+        WidgetSystem* _widgetSystem;
+        Logger _logger;
+
+        Renderer _renderer;
     };
 }

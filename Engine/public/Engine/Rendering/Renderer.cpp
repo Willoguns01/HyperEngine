@@ -31,7 +31,16 @@ namespace HyperEngine
 
     void Renderer::ApplySettings(const GraphicsSettings& settings)
     {
-        _impl->SetPresentMode(settings.presentMode);
+
+    }
+
+    void Renderer::SetPresentMode(daxa::PresentMode presentMode)
+    {
+        _impl->SetPresentMode(presentMode);
+    }
+
+    daxa::PresentMode Renderer::GetPresentMode() const {
+        return _impl->_currentPresentMode;
     }
 
     daxa::Instance Renderer::GetInstance() {

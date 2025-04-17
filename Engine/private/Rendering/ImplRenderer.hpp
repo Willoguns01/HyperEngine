@@ -25,6 +25,7 @@ namespace HyperEngine
 
         RendererConfig _initialConfig = {};
         GraphicsSettings _graphicsSettings = {};
+        daxa::PresentMode _currentPresentMode = daxa::PresentMode::MAX_ENUM;
 
         uint32_t _renderingWidth = 0;
         uint32_t _renderingHeight = 0;
@@ -49,7 +50,6 @@ namespace HyperEngine
 
         void SetupTaskGraph();
 
-        // effectively just recreates the swapchain with different present mode ☜(ﾟヮﾟ☜)
         void SetPresentMode(daxa::PresentMode presentMode);
     };
 }
