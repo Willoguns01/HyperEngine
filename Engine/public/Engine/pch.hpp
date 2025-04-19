@@ -1,5 +1,6 @@
 #include <unordered_map>
 #include <iostream>
+#include <cstring>
 #include <fstream>
 #include <sstream>
 #include <string>
@@ -25,6 +26,12 @@
 
 #include <imgui_impl_glfw.h>
 #include <imgui.h>
+
+#include <vulkan/vulkan.h>
+
+#include <openxr/openxr.h>
+#define XR_USE_GRAPHICS_API_VULKAN
+#include <openxr/openxr_platform.h>
 
 #include <Engine/Logger.hpp>
 #include <Engine/Window.hpp>

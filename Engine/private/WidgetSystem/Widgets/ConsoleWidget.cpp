@@ -19,12 +19,6 @@ namespace HyperEngine::Widgets
         memset(_inputBuffer, 0, sizeof(_inputBuffer));
     
         _engineLogger = logger;
-        _engineLogger.Info("Initialised logger widget");
-    }
-
-    ConsoleWidget::~ConsoleWidget()
-    {
-        _engineLogger.Info("Cleaned-up logger widget");
     }
 
     void ConsoleWidget::Update()

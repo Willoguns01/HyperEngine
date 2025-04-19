@@ -17,6 +17,7 @@ find_package(EnTT CONFIG REQUIRED)
 find_package(glm CONFIG REQUIRED)
 find_package(enkiTS CONFIG REQUIRED)
 find_package(imgui CONFIG REQUIRED)
+find_package(OpenXR CONFIG REQUIRED)
 
 # sources and includes
 # engine
@@ -37,6 +38,8 @@ target_link_libraries(Engine PUBLIC
     # rendering / windowing
     glfw
     daxa::daxa
+    OpenXR::headers
+    OpenXR::openxr_loader
     # engine
     spdlog::spdlog 
     Jolt::Jolt 

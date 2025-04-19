@@ -65,6 +65,40 @@ namespace
 
 namespace HyperEngine
 {
+    Logger::Logger(const std::string& name)
+    {
+        impl = std::make_shared<ImplLogger>(name);
+    }
+
+    void Logger::Info(const std::string& log) const
+    {
+        impl->Info(log);
+    }
+
+    void Logger::Warn(const std::string& log) const
+    {
+        impl->Warn(log);
+    }
+
+    void Logger::Error(const std::string& log) const
+    {
+        impl->Error(log);
+    }
+
+    bool Logger::IsValid() const {
+        return impl->_isValid;
+    }
+
+    std::vector<Logger::LoggerEntry> Logger::GetLogs()
+    {
+        return impl->GetLogs();
+    }
+
+    std::shared_ptr<spdlog::logger> Logger::GetLogger() const
+    {
+        return impl->_logger;
+    }
+
     ImplLogger::ImplLogger(const std::string& name)
     {
         std::unique_lock<std::mutex> lock(loggerInitMutex);
@@ -125,17 +159,17 @@ namespace HyperEngine
         _logger.reset();
     }
 
-    void ImplLogger::Info(const std::string& log)
+    void ImplLogger::Info(const std::string& log) const
     {
         _logger->info(log.data());
     }
 
-    void ImplLogger::Warn(const std::string& log)
+    void ImplLogger::Warn(const std::string& log) const
     {
         _logger->warn(log.data());
     }
 
-    void ImplLogger::Error(const std::string& log)
+    void ImplLogger::Error(const std::string& log) const
     {
         _logger->error(log.data());
     }

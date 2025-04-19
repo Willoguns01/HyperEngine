@@ -3,6 +3,47 @@
 
 namespace HyperEngine
 {
+    Renderer::Renderer(const RendererConfig& config)
+    {
+        _impl = std::make_shared<ImplRenderer>(config);
+    }
+
+    void Renderer::Resize(uint32_t width, uint32_t height)
+    {
+        _impl->Resize(width, height);
+    }
+
+    void Renderer::RenderScene(const RenderSceneInfo& renderInfo)
+    {
+        _impl->RenderScene(renderInfo);
+    }
+
+    GraphicsSettings Renderer::GetSettings() const {
+        return _impl->_graphicsSettings;
+    }
+
+    void Renderer::ApplySettings(const GraphicsSettings& settings)
+    {
+
+    }
+
+    void Renderer::SetPresentMode(daxa::PresentMode presentMode)
+    {
+        _impl->SetPresentMode(presentMode);
+    }
+
+    daxa::PresentMode Renderer::GetPresentMode() const {
+        return _impl->_currentPresentMode;
+    }
+
+    daxa::Instance Renderer::GetInstance() {
+        return _impl->_instance;
+    }
+
+    daxa::Device Renderer::GetDevice() {
+        return _impl->_device;
+    }
+
     ImplRenderer::ImplRenderer(const RendererConfig& config)
     {
         _logger = Logger("Renderer");
@@ -17,16 +58,8 @@ namespace HyperEngine
 
         _currentPresentMode = config.presentMode;
 
-        _instance = daxa::create_instance({
-            .flags = daxa::InstanceFlagBits::DEBUG_UTILS | daxa::InstanceFlagBits::PARENT_MUST_OUTLIVE_CHILD,
-            .engine_name = config.applicationName,
-            .app_name = config.applicationName
-        });
-
-        _device = _instance.create_device_2(_instance.choose_device(daxa::ImplicitFeatureFlagBits::NONE, {
-            .explicit_features = daxa::ExplicitFeatureFlagBits::NONE,
-            .name = "Device"
-        }));
+        _instance = config.instance;
+        _device = config.device;
 
         _swapchain = _device.create_swapchain({
             .native_window = config.windowHandle,
@@ -53,7 +86,7 @@ namespace HyperEngine
             });
         }
 
-        _logger.Info("Initialised Renderer for application {0}", config.applicationName.data());
+        _logger.Info("Initialised Renderer");
     }
 
     ImplRenderer::~ImplRenderer()

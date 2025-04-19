@@ -13,7 +13,7 @@ namespace HyperEngine::Widgets
 
         ConsoleWidget() = default;
         ConsoleWidget(Logger logger);
-        ~ConsoleWidget();
+        ~ConsoleWidget() = default;
 
         void Update() override;
 

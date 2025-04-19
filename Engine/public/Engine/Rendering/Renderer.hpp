@@ -18,7 +18,8 @@ namespace HyperEngine
 {
     struct RendererConfig
     {
-        std::string_view applicationName = "HyperEngine";
+        daxa::Instance instance;
+        daxa::Device device;
         uint32_t renderWidth = 800;
         uint32_t renderHeight = 600;
         daxa::NativeWindowHandle windowHandle = nullptr;
