@@ -41,6 +41,7 @@ namespace HyperEngine
 
         void SetMouseCapture(bool shouldCapture) const;
         bool ShouldClose() const;
+        void Kill();
         void Update();
 
         bool GetSwapchainState() const;

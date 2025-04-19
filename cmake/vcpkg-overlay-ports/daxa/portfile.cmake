@@ -5,7 +5,7 @@
 vcpkg_from_git(
     OUT_SOURCE_PATH SOURCE_PATH
     URL https://github.com/Willoguns01/Daxa.git
-    REF 510097ecb47e0f97104c066772da5cf61dc4ac33
+    REF 08998c7485f880ea30a8ae6f7e8e65f4297ad3bb
 )
 
 # Standard vcpkg stuff

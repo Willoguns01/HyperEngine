@@ -34,6 +34,10 @@ namespace HyperEngine
         return impl->ShouldClose();
     }
 
+    void Window::Kill() {
+        impl->Kill();
+    }
+
     void Window::Update() {
         impl->Update();
     }
@@ -133,6 +137,10 @@ namespace HyperEngine
 
     bool ImplWindow::ShouldClose() const {
         return glfwWindowShouldClose(_windowPtr);
+    }
+
+    void ImplWindow::Kill() {
+        glfwSetWindowShouldClose(_windowPtr, true);
     }
 
     void ImplWindow::Update() {

@@ -17,6 +17,7 @@ namespace HyperEngine
 
         void SetMouseCapture(bool shouldCapture) const;
         bool ShouldClose() const;
+        void Kill();
         void Update();
 
         Logger _logger;

@@ -112,6 +112,11 @@ public:
     {
         while (!window.ShouldClose())
         {
+            if (vrHeadset.ExitRequested()) {
+                window.Kill();
+                continue;
+            }
+
             window.Update();
 
             ImGui_ImplGlfw_NewFrame();
@@ -123,7 +128,22 @@ public:
             }
 
             renderer.RenderScene({});
+
+            uint32_t swapchainImageIndex;
+            daxa::BeginFrameResult result = vrHeadset.BeginFrame(swapchainImageIndex);
+            if (result == daxa::BeginFrameResult::RENDER)
+            {
+                daxa::ImageId dstImage = vrHeadset.GetRenderTarget(swapchainImageIndex);
+                vrHeadset.EndFrame();
+            }
+            else if (result == daxa::BeginFrameResult::ERROR)
+            {
+                logger.Warn("Encountered OpenXR error when beginning frame");
+            }
         }
+
+        renderer.GetDevice().wait_idle();
+        renderer.GetDevice().collect_garbage();
     }
 
 private:
